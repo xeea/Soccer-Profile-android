@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>App - Soccer Pro-File</title>
+
+    <!-- Framework7 Library CSS files -->
+    <link rel="stylesheet" href="style/framework7.material.min.css">
+    <link rel="stylesheet" href="style/framework7.material.colors.min.css">
+    <!-- Custom library CSS files -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aja/0.4.1/aja.min.js"></script>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode -->
+    <div class="statusbar-overlay"></div>
+    <!-- Framework7 Panels overlay -->
+    <div class="panel-overlay"></div>
+
+    <!-- Main page -->
+    <div class="views">
+      <div class="view view-main">
+        <!-- Top navbar -->
+        <div class="pages">
+          <div class="page" data-page="index">
+            <div class="page-content" style="background-color: black; text-align: center;">
+              <img src="images/logo.png" style="width: 75%; height: auto; margin-top: 20px;"/>
+              <div class="content-block-title">
+                Login
+              </div>
+              <div class="list-block inset">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="content-media">
+                        <img src="images/userIcon.png" class="icon-sm"/>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-input">
+                          <input id="inputEmail" type="email" placeholder"Email Address">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-block inset section-space-neg-sm">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="content-media">
+                        <img src="images/lockIcon.png" class="icon-sm"/>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-input">
+                          <input id="inputPassword" type="password" placeholder"Password" class>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block">
+                <div class="row">
+                  <div class="col-100">
+                    <a id="loginBtn" class="button button-success" type="button">Log In</a>
+                  </div>
+                  <div class="col-100">
+                    <img src="images/errorIcon.png" id="errorIcon" class="hidden section-space section-space-neg-md" style="height: 20px; width: auto;"/>
+                    <p id="errorMessage" class="hidden error" style="margin-top: -3px;"></p>
+                    <img src="images/loadingAnimation.gif" id="loaderGif" class="hidden titleHeading" style="height: 30px; width: auto; margin-top: 22px; margin-right: 10px;"/>
+                    <p id="loginMessage" class="hidden titleHeading" style="margin-top: -3px;">Logging in... Please Wait.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Initialization Javascript Files -->
+    <script type="text/javascript" src="scripts/framework7.min.js"></script>
+    <script type="text/javascript" src="scripts/appInit.js"></script>
+    <script type="text/javascript" src="scripts/login.js"></script>
+  </body>
+</html>

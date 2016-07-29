@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>App - Soccer Pro-File</title>
+
+    <!-- Framework7 Library CSS files -->
+    <link rel="stylesheet" href="style/framework7.material.min.css">
+    <link rel="stylesheet" href="style/framework7.material.colors.min.css">
+    <!-- Custom library CSS files -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aja/0.4.1/aja.min.js"></script>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode -->
+    <div class="statusbar-overlay"></div>
+    <!-- Framework7 Panels overlay -->
+    <div class="panel-overlay"></div>
+
+    <!-- Main page -->
+    <div class="views">
+      <div class="view view-main">
+
+        <div class="pages">
+          <div data-page="createEvent" class="page">
+            <div class="page-content" style="background-color: black; text-align: center;">
+              <div class="col-100">
+                <br />
+                <img src="images/logo.png" class="section-space" style="width: 75%; height: auto;"/>
+                <hr class="section-space" style="width: 80%;"/>
+                <img src="images/createEvent.png" class="section-space" style="width: 50%; height: auto;"/>
+                <div class="content-block-title">
+                  Event Type
+                </div>
+                <div class="list-block inset">
+                  <ul>
+                    <li>
+                      <a id="practice" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">
+                              Practice
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-block inset section-space-neg-md">
+                  <ul>
+                    <li>
+                      <a id="gameEvent" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">
+                              Game
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-block inset section-space-neg-md">
+                  <ul>
+                    <li>
+                      <a id="tourneyEvent" class="item-link">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">
+                              Tournament
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Application Initialization Javascript Files -->
+        <script src="scripts/framework7.js"></script>
+        <script src="scripts/framework7.min.js"></script>
+        <script src="scripts/appInit.js"></script>
+        <script src="scripts/createEvent.js"></script>
+</body>
+</html>

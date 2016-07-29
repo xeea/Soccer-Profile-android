@@ -1,0 +1,88 @@
+.navbar {
+  background-color: black;
+  color: white;
+}
+
+.item-link {
+  background-color: white;
+  color: black;
+}
+
+.list-block {
+  background-color: white;
+  color: black;
+}
+
+.navGreen {
+  background-color: #41973C;
+  color: white;
+}
+
+.mainBG {
+  background-image: url("../images/grass.jpg");
+  background-size: cover;
+}
+
+.section-space-neg-sm {
+  margin-top: -20px;
+}
+
+.section-space-neg-md {
+  margin-top: -30px;
+}
+
+.section-space {
+  margin-top: 20px;
+}
+
+.section-space-sm {
+  margin-top: 10px;
+}
+
+.icon-sm {
+  height: 30px;
+  width: auto;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.button-success {
+  background-color: #32AE05;
+  color: white;
+  border: 2px solid white;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12pt;
+  top:10px;
+
+}
+
+.button-primary {
+  background-color: #306AB0;
+  color: white;
+  border: 2px solid white;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12pt;
+}
+
+#forgotPassword {
+  color: white;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.titleHeading {
+  color: white;
+}
+
+.error {
+  color: #F14E4E;
+}
+
+#login_toAppear{
+	display: none;
+}

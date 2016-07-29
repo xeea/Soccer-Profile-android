@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>App - Soccer Pro-File</title>
+
+    <!-- Framework7 Library CSS files -->
+    <link rel="stylesheet" href="style/framework7.material.min.css">
+    <link rel="stylesheet" href="style/framework7.material.colors.min.css">
+    <!-- Custom library CSS files -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aja/0.4.1/aja.min.js"></script>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode -->
+    <div class="statusbar-overlay"></div>
+    <!-- Framework7 Panels overlay -->
+    <div class="panel-overlay"></div>
+
+    <!-- Main page -->
+    <div class="views">
+      <div class="view view-main">
+
+        <!-- Top navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a id="backbutton" href="ageGroup.html" class="back link icon-only">
+                <i class="icon icon-back"></i>
+              </a>
+              Soccer Pro-File
+            </div>
+          </div>
+        </div>
+
+        <div class="pages">
+          <div class="page" data-page="ageGroup">
+            <div class="page-content" style="background-color: black; text-align: center;">
+              <div class="col-100">
+                <br />
+                <div class="content-block-title">
+                  Select Age Group
+                </div>
+                <div class="list-block inset">
+                  <ul id="buttonList">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Application Initialization Javascript Files -->
+        <script src="scripts/framework7.js"></script>
+        <script src="scripts/framework7.min.js"></script>
+        <script src="scripts/appInit.js"></script>
+        <script src="scripts/ageGroup.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>App - Soccer Pro-File</title>
+
+    <!-- Framework7 Library CSS files -->
+    <link rel="stylesheet" href="style/framework7.material.min.css">
+    <link rel="stylesheet" href="style/framework7.material.colors.min.css">
+    <!-- Custom library CSS files -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aja/0.4.1/aja.min.js"></script>
+
+    <script src="scripts/eval.js"></script>
+</head>
+<body>
+    <!-- Status bar overlay for fullscreen mode -->
+    <div class="statusbar-overlay"></div>
+    <!-- Framework7 Panels overlay -->
+    <div class="panel-overlay"></div>
+
+    <!-- Main page -->
+    <div class="views">
+        <div class="view view-main" datapage="form-elements">
+            <!-- Top navbar -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a id="backbutton" href="player.html" class="back link icon-only">
+                            <i class="icon icon-back"></i>
+                        </a>
+                        Soccer Pro-File
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, data-page contains page name-->
+                <div class="page" data-page="eval">
+                    <!-- Scrollable page content-->
+                    <div class="page-content">
+                        <div class="list-block inputs-list">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner not-empty-state">
+                                            <div class="item-title label">
+                                                Attendance
+                                            </div>
+                                            <div class="item-input item-input-field not-empty-state">
+                                                <select id="attendance" class="not-empty-state">
+                                                    <option>Present</option>
+                                                    <option>Late</option>
+                                                    <option>Absent</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="align-top">
+                                    <div class="item-content">
+                                        <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-input item-input-field">
+                                                <textarea id="attendanceCmt" class="resizable"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div id="abilityTitle" class="item-title label">
+                                                Ability: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="abilityScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div id="attitudeTitle" class="item-title label">
+                                                Attitude: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="attitudeScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="align-top">
+                                    <div class="item-content">
+                                        <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-input item-input-field">
+                                                <textarea  id="attitudeCmt" class="resizable"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="gameSenseDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="gameSenseTitle" class="item-title label">
+                                                Game Sense: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="gameSenseScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="energyDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="energyTitle" class="item-title label">
+                                                Energy/Work Rate: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="energyScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="techAbilityDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="techAbilityTitle" class="item-title label">
+                                                Technical Ability: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="techAbilityScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="lostPossRespDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="lostPossessionTitle" class="item-title label">
+                                                Lost Possession Resp: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="lostPossRespScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="initiativeDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="initiativeTitle" class="item-title label">
+                                                Takes Initiative: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="initiativeScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner" id="firstTouchDiv" style="display: none">
+                                            <div id="firstTouchTitle" class="item-title label">
+                                                First Touch: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="firstTouchScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="passingDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="passingTitle" class="item-title label">
+                                                Passing Ability: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="passingScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="shootingDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="shootingTitle" class="item-title label">
+                                                Shooting Accuracy: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="shootingScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="defendingDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="defendTitle" class="item-title label">
+                                                1-on-1 Defending: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="defendingScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content" id="dribblingDiv" style="display: none">
+                                        <div class="item-inner">
+                                            <div id="dribAbilityTitle" class="item-title label">
+                                                Dribbling Ability: 3
+                                            </div>
+                                            <div class="item-input">
+                                                <div class="range-slider">
+                                                    <input id="dribblingScore" type="range" min="1" max="5" value="3" step="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <div class="row">
+                                <div class="col-100">
+                                    <a id="clearBtn" class="button button-primary" type="button">Reset</a>
+                                    <a id="submitBtn" class="button button-success section-space-sm" type="button">Submit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+<!-- Application Initialization Javascript Files -->
+<script src="scripts/framework7.js"></script>
+<script src="scripts/framework7.min.js"></script>
+<script src="scripts/appInit.js"></script>
+<script src="scripts/eval.js"></script>
+</body>
+</html>
