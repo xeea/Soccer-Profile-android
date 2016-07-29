@@ -6,7 +6,22 @@ function check() {
     //returns the user to the index page if not a valid user
     window.location.href = "index.html";
   }
+  
 }
+
+$('input[name="attendance"]').on('change', function() {
+	
+	if ( $('input[name=attendance]:checked').val() == 'Present') {
+		  attendanceScore = 5;
+	} else if ( $('input[name=attendance]:checked').val() == 'Late') {
+		attendanceScore = 3;
+	} else {
+		attendanceScore = 1;
+	}
+	//alert($('input[name=attendance]:checked').val());
+	//window.alert(attendanceScore);
+
+});
 
 //gets the 'evalEvent' associative array from sessionStorage
 var evalEvent = sessionStorage.getItem('evalEvent');
@@ -125,12 +140,20 @@ $("#submitBtn").click(function() {
 
   //if it finds the player
   if (player) {
+    var attendanceScore = 5;
+    if ( $("#attendance").val() == "Late") {
+      attendanceScore = 3;
+    } else if ( $("#attendance").val() == "Absent") {
+      attendanceScore = 1;
+    } else {
+      attendanceScore = 5;
+    }
     //send the EventID previously recieved.
     array.evaluations[count].eventID = eventID;
 
     //change all the player's default category values
     array.evaluations[count].playerID = sessionStorage.getItem('playerID');
-    array.evaluations[count].attendance = $("#attendance").val();
+    array.evaluations[count].attendance = attendanceScore;
     array.evaluations[count].attendanceComment = $("#attendanceCmt").val();
     array.evaluations[count].ability = $("#abilityScore").val();
     array.evaluations[count].attitude = $("#attitudeScore").val();
@@ -187,7 +210,9 @@ $("#submitBtn").click(function() {
 $("#clearBtn").click(function() {
   $("#attendanceCmt").val("");
   $("#attitudeCmt").val("");
-  $("#attendance").val("Present");
+  $('#' + 'Present').prop('checked',true);
+  $("#attendanceScore").val(5);
+  attendanceScore = 5;
   $("#attitudeScore").val(3);
   $("#abilityScore").val(3);
   $("#abilityTitle").text("Ability: 3");
@@ -212,4 +237,6 @@ $("#clearBtn").click(function() {
   $('#defendTitle').text("1-on-1 Defending: 3");
   $("#dribblingScore").val(3);
   $('#dribAbilityTitle').text("Dribbling Ability: 3");
+  	//window.alert(attendanceScore);
+
 });
